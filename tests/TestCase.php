@@ -3,8 +3,8 @@
 namespace MahmoudMosaad\PowerKit\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use MahmoudMosaad\PowerKit\PowerKitServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use MahmoudMosaad\PowerKit\PowerKitServiceProvider;
 
 class TestCase extends Orchestra
 {

@@ -2,9 +2,9 @@
 
 namespace MahmoudMosaad\PowerKit;
 
-use MahmoudMosaad\PowerKit\Commands\PowerKitCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use MahmoudMosaad\PowerKit\Commands\PowerKitCommand;
 
 class PowerKitServiceProvider extends PackageServiceProvider
 {
@@ -22,10 +22,10 @@ class PowerKitServiceProvider extends PackageServiceProvider
             ->name('powerkit')
             ->hasConfigFile('powerkit')
             ->hasMigrations([
-                'create_migration_table_name_table',
+                'create_migration_table_name_table'
             ])
             ->hasCommands([
-                PowerKitCommand::class,
+                PowerKitCommand::class
             ])
             ->hasViews('powerkit')
             ->hasTranslations();
@@ -38,7 +38,7 @@ class PowerKitServiceProvider extends PackageServiceProvider
     {
         // Example: Register a singleton or binding for your package
         $this->app->singleton('powerkit', function () {
-            return new PowerKitManager;
+            return new PowerKitManager();
         });
 
         // Auto-load helper functions if any exist
@@ -66,7 +66,7 @@ class PowerKitServiceProvider extends PackageServiceProvider
                 continue;
             }
 
-            $class = __NAMESPACE__.'\\Features\\'.ucfirst($feature).'\\'.ucfirst($feature).'ServiceProvider';
+            $class = __NAMESPACE__ . '\\Features\\' . ucfirst($feature) . '\\' . ucfirst($feature) . 'ServiceProvider';
 
             if (class_exists($class)) {
                 $this->app->register($class);
@@ -79,12 +79,12 @@ class PowerKitServiceProvider extends PackageServiceProvider
      */
     protected function loadHelpers(): void
     {
-        $helpersPath = __DIR__.'/helpers';
+        $helpersPath = __DIR__ . '/helpers';
         if (! is_dir($helpersPath)) {
             return;
         }
 
-        foreach (glob($helpersPath.'/*.php') as $helperFile) {
+        foreach (glob($helpersPath . '/*.php') as $helperFile) {
             require_once $helperFile;
         }
     }

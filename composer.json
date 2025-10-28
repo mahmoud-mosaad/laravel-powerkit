@@ -38,7 +38,10 @@
         "psr-4": {
             "MahmoudMosaad\\PowerKit\\": "src/",
             "MahmoudMosaad\\PowerKit\\Database\\Factories\\": "database/factories/"
-        }
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

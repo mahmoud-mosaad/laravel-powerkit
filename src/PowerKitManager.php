@@ -2,9 +2,9 @@
 
 namespace MahmoudMosaad\PowerKit;
 
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\App;
 
 /**
  * PowerKitManager
@@ -16,6 +16,8 @@ class PowerKitManager
 {
     /**
      * Package configuration.
+     *
+     * @var array
      */
     protected array $config;
 
@@ -50,7 +52,7 @@ class PowerKitManager
     public function feature(string $feature)
     {
         $feature = ucfirst($feature);
-        $class = __NAMESPACE__."\\Features\\{$feature}\\{$feature}Manager";
+        $class = __NAMESPACE__ . "\\Features\\{$feature}\\{$feature}Manager";
 
         if (! class_exists($class)) {
             throw new \InvalidArgumentException("Feature [{$feature}] not found or not enabled.");
@@ -64,7 +66,7 @@ class PowerKitManager
      */
     public function formatAmount($amount, $currency = 'USD'): string
     {
-        return number_format($amount, 2).' '.strtoupper($currency);
+        return number_format($amount, 2) . ' ' . strtoupper($currency);
     }
 
     /**

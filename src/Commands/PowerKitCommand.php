@@ -3,17 +3,16 @@
 namespace MahmoudMosaad\PowerKit\Commands;
 
 use Illuminate\Console\Command;
+use MahmoudMosaad\PowerKit\Facades\PowerKit;
 
 class PowerKitCommand extends Command
 {
-    public $signature = 'powerkit';
-
-    public $description = 'Power Kit';
+    protected $signature = 'powerkit:hello';
+    protected $description = 'Display a welcome message from PowerKit';
 
     public function handle(): int
     {
-        $this->comment('All done');
-
+        $this->info(PowerKit::sayHello());
         return self::SUCCESS;
     }
 }

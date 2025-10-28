@@ -2,8 +2,8 @@
 
 namespace MahmoudMosaad\PowerKit\Tests\Feature;
 
-use MahmoudMosaad\PowerKit\Tests\TestCase;
 use MahmoudMosaad\PowerKit\Facades\PowerKit;
+use MahmoudMosaad\PowerKit\Tests\TestCase;
 
 class PowerKitTest extends TestCase
 {

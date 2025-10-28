@@ -12,11 +12,11 @@ class PowerKit
 
     public function payment(): Features\Payments\PaymentsManager
     {
-        return new Features\Payments\PaymentsManager();
+        return new Features\Payments\PaymentsManager;
     }
 
     public function exception(): Features\Exceptions\ExceptionManager
     {
-        return new Features\Exceptions\ExceptionManager();
+        return new Features\Exceptions\ExceptionManager;
     }
 }

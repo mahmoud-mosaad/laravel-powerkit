@@ -19,20 +19,37 @@
     "require": {
         "php": "^8.2 || ^8.3 || ^8.4",
         "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0 || ^11.0 || ^12.0"
+        "illuminate/contracts": "^10.0 || ^11.0 || ^12.0",
+        "giggsey/libphonenumber-for-php": "^9.0",
+        "google/apiclient": "^2.18",
+        "guzzlehttp/guzzle": "^7.9",
+        "kreait/firebase-php": "^7.10",
+        "myfatoorah/laravel-package": "2.1",
+        "predis/predis": "*",
+        "pusher/pusher-php-server": "^7.2",
+        "stichoza/google-translate-php": "^5.3",
+        "tucker-eric/eloquentfilter": "^3.5",
+        "tymon/jwt-auth": "^2.2"
+    },
+    "suggest": {
+        "laravel/sanctum": "Required only if you use authentication-related features.",
     },
     "require-dev": {
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.8",
         "larastan/larastan": "^3.0",
         "orchestra/testbench": "^9.0 || ^10.0",
-        "pestphp/pest": "^4.0",
-        "pestphp/pest-plugin-arch": "^4.0",
-        "pestphp/pest-plugin-laravel": "^4.0",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.8",
+        "pestphp/pest-plugin-arch": "^3.8",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
-        "spatie/laravel-ray": "^1.35"
+        "spatie/laravel-ray": "^1.35",
+        "fakerphp/faker": "^1.23",
+        "laravel/pail": "^1.2.2",
+        "laravel/sail": "^1.41",
+        "mockery/mockery": "^1.6"
     },
     "autoload": {
         "psr-4": {
